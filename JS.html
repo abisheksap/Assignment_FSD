@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | ePortfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="main-nav">
+    <div class="nav-container">
+        <div class="nav-logo"><a href="index.html">My ePortfolio</a></div>
+        <ul class="nav-ul">
+            <li><a href="fsd.html">Full Stack</a></li>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="JS.html" class="active">JavaScript</a></li>
+            <li><a href="bootstrap.html">Bootstrap</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="mainbody">
+
+    <!-- OVERVIEW -->
+    <div class="paragraph reveal" id="js-overview">
+        <div class="boarder">
+            <div class="section">
+                <h1 class="p_section-heading align_center">JavaScript (JS)</h1>
+                <div class="section-image">
+                    <img src="img/js.png" class="img_fsd" alt="JavaScript Illustration">
+                </div>
+                <p class="p_section-content align_center">
+                    JavaScript is the only programming language that runs natively in every web browser —
+                    making it the engine behind every button click, live update, animation, and API call
+                    you've ever experienced on the web. It started as a simple scripting tool in 1995 and
+                    has since grown into a full‑stack language powering front‑end frameworks (React, Vue),
+                    back‑end servers (Node.js), mobile apps, and even machine learning. Each section below
+                    pairs working code with a live interactive demo you can click and test right now.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. VARIABLES -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">1. Variables &amp; Data Types</h2>
+                <div class="section-content">
+                    <p><code>let</code>, <code>const</code>, and <code>var</code> declare variables. JS is dynamically typed — one variable can hold any type.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/variables.png" alt="JavaScript variables code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output" id="var-demo">
+                                <p id="varOut"></p>
+                                <script>
+                                    const city = "Dublin";
+                                    let temperature = 14;
+                                    const isRaining = true;
+                                    document.getElementById("varOut").innerHTML =
+                                        `🌧️ <strong>${city}</strong> — ${temperature}°C — Raining: ${isRaining}<br>
+                                        <code>typeof city</code> → "${typeof city}"<br>
+                                        <code>typeof temperature</code> → "${typeof temperature}"`;
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Best practice:</strong> Prefer <code>const</code> by default; switch to <code>let</code> only when reassignment is needed. Avoid <code>var</code> — it has confusing function-scoped behaviour.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. FUNCTIONS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">2. Functions – Reusable Blocks</h2>
+                <div class="section-content">
+                    <p>Functions package logic for reuse. Arrow functions offer a concise ES6 syntax.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/js-functions.png" alt="JavaScript functions code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <input type="text" id="nameInput" placeholder="Enter your name" style="padding:6px 10px;border:1px solid #ccc;border-radius:8px;width:100%;margin-bottom:8px;">
+                                <button onclick="greetUser()" style="padding:6px 18px;background:var(--c-navy);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:600;">Greet ↗</button>
+                                <p id="greetingMsg" style="margin-top:8px;font-weight:600;color:var(--c-navy);"></p>
+                                <script>
+                                    function greetUser() {
+                                        const n = document.getElementById("nameInput").value.trim() || "Stranger";
+                                        const hour = new Date().getHours();
+                                        const time = hour < 12 ? "Good morning" : hour < 18 ? "Good afternoon" : "Good evening";
+                                        document.getElementById("greetingMsg").textContent = `${time}, ${n}! 👋`;
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Arrow functions:</strong> <code>const greet = (name) => `Hello, ${name}!`</code> — shorter syntax, and they don't bind their own <code>this</code>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. ARRAYS & LOOPS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">3. Arrays &amp; Loops</h2>
+                <div class="section-content">
+                    <p>Arrays store ordered lists. Modern methods like <code>map()</code>, <code>filter()</code>, and <code>reduce()</code> replace manual loops.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/js-array-loop.png" alt="JavaScript array loop code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <button onclick="buildList()" style="padding:6px 18px;background:var(--c-navy);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:600;margin-bottom:8px;">Generate Tech Stack List</button>
+                                <ul id="techList" style="padding-left:1.2rem;"></ul>
+                                <p id="listCount" style="font-size:0.85rem;color:var(--c-muted);margin-top:4px;"></p>
+                                <script>
+                                    function buildList() {
+                                        const stack = ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Node.js", "SQL"];
+                                        const webOnly = stack.filter(t => !t.includes("SQL"));
+                                        document.getElementById("techList").innerHTML =
+                                            webOnly.map(t => `<li>${t}</li>`).join("");
+                                        document.getElementById("listCount").textContent =
+                                            `Showing ${webOnly.length} of ${stack.length} (filtered SQL out with .filter())`;
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Modern iteration:</strong> <code>.map()</code> transforms, <code>.filter()</code> selects, <code>.reduce()</code> accumulates. These return new arrays — they don't mutate the original.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. OBJECTS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">4. JavaScript Objects</h2>
+                <div class="section-content">
+                    <p>Objects group related data and behaviour into named key-value pairs — the core of how JS models real-world entities.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/js-objects.png" alt="JavaScript objects code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <button onclick="showStudent()" style="padding:6px 18px;background:var(--c-navy);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:600;margin-bottom:8px;">Render Student Object</button>
+                                <div id="studentCard"></div>
+                                <script>
+                                    function showStudent() {
+                                        const student = {
+                                            name: "Maria Chen",
+                                            course: "CET-138 Full Stack",
+                                            grade: "A",
+                                            skills: ["HTML", "CSS", "JavaScript"],
+                                            summary() { return `${this.name} — ${this.course} (${this.grade})`; }
+                                        };
+                                        document.getElementById("studentCard").innerHTML =
+                                            `<p><strong>${student.summary()}</strong></p>
+                                            <p>Skills: ${student.skills.join(" · ")}</p>`;
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Destructuring shortcut:</strong> <code>const { name, grade } = student</code> unpacks object properties into variables — great for cleaner function parameters.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. DOM MANIPULATION -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">5. DOM Manipulation</h2>
+                <div class="section-content">
+                    <p>The Document Object Model is the browser's live tree of your HTML. JS can read and rewrite any node at any time.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/js-dom.png" alt="DOM manipulation code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <p id="demoText" style="font-size:1.1rem;font-weight:600;padding:8px;border-radius:8px;transition:all 0.3s;">← Use the buttons to change me</p>
+                                <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+                                    <button onclick="document.getElementById('demoText').textContent='Text swapped by JS!'" style="padding:5px 14px;background:var(--c-sky);color:var(--c-navy);border:none;border-radius:20px;cursor:pointer;font-weight:600;">Change Text</button>
+                                    <button onclick="document.getElementById('demoText').style.color='#e9b42d'" style="padding:5px 14px;background:var(--c-peach);color:var(--c-navy);border:none;border-radius:20px;cursor:pointer;font-weight:600;">Yellow Text</button>
+                                    <button onclick="document.getElementById('demoText').style.background='var(--c-navy)';document.getElementById('demoText').style.color='#FFF9D2'" style="padding:5px 14px;background:var(--c-navy);color:#fff;border:none;border-radius:20px;cursor:pointer;font-weight:600;">Dark Mode</button>
+                                    <button onclick="document.getElementById('demoText').textContent='← Use the buttons to change me';document.getElementById('demoText').style.cssText=''" style="padding:5px 14px;background:#eee;color:#333;border:none;border-radius:20px;cursor:pointer;font-weight:600;">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Key methods:</strong> <code>querySelector()</code> selects elements (like CSS selectors); <code>innerHTML</code> / <code>textContent</code> update content; <code>classList.toggle()</code> flips classes on/off.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. EVENTS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">6. Events – Responding to User Actions</h2>
+                <div class="section-content">
+                    <p>Events fire when the user interacts. <code>addEventListener</code> keeps logic clean and separable from HTML.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/js-events.png" alt="JavaScript events code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <input type="text" id="liveInput" placeholder="Type to see live events…" style="padding:6px 10px;border:1px solid #ccc;border-radius:8px;width:100%;margin-bottom:8px;">
+                                <button id="evtBtn" style="padding:6px 18px;background:var(--c-navy);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:600;margin-bottom:8px;">Click me</button>
+                                <p id="eventMessage" style="font-style:italic;color:var(--c-muted);">No event yet — try typing or clicking above.</p>
+                                <script>
+                                    document.getElementById("evtBtn").addEventListener("click", () => {
+                                        document.getElementById("eventMessage").innerHTML = "🖱️ <strong>click</strong> event fired on the button!";
+                                    });
+                                    document.getElementById("liveInput").addEventListener("input", (e) => {
+                                        const chars = e.target.value.length;
+                                        document.getElementById("eventMessage").innerHTML = `⌨️ <strong>input</strong> event — you typed: "<em>${e.target.value}</em>" (${chars} chars)`;
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Common events:</strong> <code>click</code>, <code>input</code>, <code>submit</code>, <code>keydown</code>, <code>mouseover</code>, <code>scroll</code>, <code>DOMContentLoaded</code>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. LOCALSTORAGE -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">7. Web Storage (localStorage)</h2>
+                <div class="section-content">
+                    <p>localStorage saves key-value strings in the browser — data survives page refreshes and tab closes.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/js-storage.png" alt="localStorage code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <input type="text" id="storageInput" placeholder="Type a note to save…" style="padding:6px 10px;border:1px solid #ccc;border-radius:8px;width:100%;margin-bottom:8px;">
+                                <div style="display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+                                    <button onclick="saveToLocal()" style="padding:5px 14px;background:var(--c-navy);color:#fff;border:none;border-radius:20px;cursor:pointer;font-weight:600;">💾 Save</button>
+                                    <button onclick="loadFromLocal()" style="padding:5px 14px;background:var(--c-sky);color:var(--c-navy);border:none;border-radius:20px;cursor:pointer;font-weight:600;">📂 Load</button>
+                                    <button onclick="clearLocal()" style="padding:5px 14px;background:#eee;color:#333;border:none;border-radius:20px;cursor:pointer;font-weight:600;">🗑 Clear</button>
+                                </div>
+                                <p id="storageMessage" style="font-style:italic;color:var(--c-muted);">Nothing saved yet.</p>
+                                <script>
+                                    function saveToLocal() {
+                                        const val = document.getElementById("storageInput").value;
+                                        localStorage.setItem("portfolioNote", val);
+                                        document.getElementById("storageMessage").innerHTML = `✅ Saved: "<strong>${val}</strong>"`;
+                                    }
+                                    function loadFromLocal() {
+                                        const saved = localStorage.getItem("portfolioNote");
+                                        document.getElementById("storageMessage").innerHTML = saved
+                                            ? `📂 Loaded: "<strong>${saved}</strong>"`
+                                            : "Nothing saved yet.";
+                                    }
+                                    function clearLocal() {
+                                        localStorage.removeItem("portfolioNote");
+                                        document.getElementById("storageMessage").textContent = "🗑️ Storage cleared.";
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>sessionStorage vs localStorage:</strong> sessionStorage clears when the tab closes; localStorage persists until manually removed. Both are limited to ~5 MB per origin.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. ASYNC -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">8. Asynchronous JavaScript</h2>
+                <div class="section-content">
+                    <p>JS is single-threaded, so async patterns keep the UI responsive while waiting for data or timers.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/js-async.png" alt="async JS code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <button id="asyncBtn" onclick="runCountdown()" style="padding:6px 18px;background:var(--c-navy);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:600;margin-bottom:8px;">▶ Start 3-Second Countdown</button>
+                                <p id="asyncMessage" style="font-weight:600;font-size:1.1rem;color:var(--c-navy);">Press the button to begin.</p>
+                                <script>
+                                    function runCountdown() {
+                                        const btn = document.getElementById("asyncBtn");
+                                        const msg = document.getElementById("asyncMessage");
+                                        btn.disabled = true;
+                                        let count = 3;
+                                        msg.textContent = `⏳ ${count}…`;
+                                        const id = setInterval(() => {
+                                            count--;
+                                            if (count > 0) {
+                                                msg.textContent = `⏳ ${count}…`;
+                                            } else {
+                                                clearInterval(id);
+                                                msg.textContent = "🎉 Done! async code keeps UI alive.";
+                                                btn.disabled = false;
+                                            }
+                                        }, 1000);
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>The trio:</strong> <code>setTimeout</code>/<code>setInterval</code> for timers; <code>fetch()</code> for HTTP calls; <code>async / await</code> to write async code that reads like synchronous code.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. BEST PRACTICES -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">9. JavaScript Best Practices &amp; Ecosystem</h2>
+                <div class="section-content">
+                    <ul>
+                        <li><strong>Code quality:</strong> Use <code>const</code>/<code>let</code>, strict equality (<code>===</code>), and avoid polluting the global scope.</li>
+                        <li><strong>Modern ES6+ syntax:</strong> Arrow functions, template literals, destructuring, optional chaining (<code>?.</code>), nullish coalescing (<code>??</code>).</li>
+                        <li><strong>Frameworks &amp; runtimes:</strong> React, Vue, Angular (front-end); Node.js, Deno (back-end); Next.js, Nuxt (full-stack).</li>
+                        <li><strong>Toolchain:</strong> ESLint (linting), Prettier (formatting), Vite (bundler), npm/pnpm (packages).</li>
+                        <li><strong>Testing:</strong> Vitest / Jest for unit tests; Cypress / Playwright for end-to-end.</li>
+                    </ul>
+                    <div class="double-description" style="margin-top:0.5rem;">
+                        <strong>The path forward:</strong> JavaScript is the only language that runs natively in browsers, on servers (Node.js), as desktop apps (Electron), and in mobile wrappers. Mastering it opens every door.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 My ePortfolio &mdash; CET-138 &middot; JavaScript</p>
+</div>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+    reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

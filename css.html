@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS | ePortfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="main-nav">
+    <div class="nav-container">
+        <div class="nav-logo"><a href="index.html" class="nav-logo">My ePortfolio</a></div>
+        <ul class="nav-ul">
+            <li><a href="fsd.html">Full Stack</a></li>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html" class="active">CSS</a></li>
+            <li><a href="JS.html">JavaScript</a></li>
+            <li><a href="bootstrap.html">Bootstrap</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="mainbody">
+
+    <!-- CSS OVERVIEW -->
+    <div class="paragraph reveal" id="css-overview">
+        <div class="boarder">
+            <div class="section">
+                <h1 class="p_section-heading align_center">Cascading Style Sheets (CSS)</h1>
+                <div class="section-image">
+                    <img src="img/css.png" class="img_fsd" alt="CSS Illustration">
+                </div>
+                <p class="p_section-content align_center">
+                    If HTML is the skeleton, CSS is the skin, clothes, and personality of a webpage.
+                    It controls every visual decision — colour palette, typography, spacing, layout,
+                    animation, and how a design responds across screen sizes. Modern CSS is remarkably
+                    powerful: Flexbox aligns items in a single axis, Grid handles two‑dimensional
+                    layouts, custom properties enable live theming, and <code>@keyframes</code> animate
+                    anything without a line of JavaScript. This module demonstrates each concept with
+                    live side‑by‑side panels — code on the left, result on the right.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SELECTORS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">Selectors &amp; Specificity</h2>
+                <div class="section-content">
+                    <p>Selectors target elements; specificity decides which rule wins when two rules clash.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <div class="code-snip">/* Element */
+p { color: #1a3a5c; }
+
+/* Class */
+.highlight { background: #FFF9D2; }
+
+/* ID */
+#hero { font-size: 2rem; }
+
+/* Attribute */
+input[type="email"] { border-color: #8CC0EB; }
+
+/* Pseudo-class */
+a:hover { text-decoration: underline; }
+
+/* Child combinator */
+nav > a { font-weight: 700; }</div>
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <p style="color:#1a3a5c;">Element selector: navy paragraph</p>
+                                <span style="background:#FFF9D2;padding:2px 8px;border-radius:6px;">.highlight class applied</span><br><br>
+                                <input type="email" placeholder="email@example.com" style="border:2px solid #8CC0EB;padding:6px 10px;border-radius:8px;width:100%;">
+                                <p style="margin-top:8px;font-size:0.85rem;color:#5a6e80;">Specificity order: Inline &gt; ID &gt; Class &gt; Element</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Tip:</strong> Avoid overusing <code>!important</code> — it breaks the natural cascade and makes debugging painful. Prefer higher specificity selectors instead.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOX MODEL -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">CSS Box Model</h2>
+                <div class="section-content">
+                    <p>Every element is a rectangular box made of four layers: content, padding, border, and margin.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <div class="code-snip">* { box-sizing: border-box; }
+
+.card {
+  width: 200px;
+  padding: 20px;
+  border: 3px solid #8CC0EB;
+  margin: 16px auto;
+  background: #BFDDF0;
+  border-radius: 12px;
+}</div>
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output — layers visualised</p>
+                            <div class="live-output">
+                                <div class="boxmodel-viz">
+                                    <div class="margin-area">Margin (transparent space)
+                                        <div class="border-area">Border (style &amp; colour)
+                                            <div class="padding-area">Padding (inner breathing room)
+                                                <div class="content-area">CONTENT</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Always use <code>box-sizing: border-box</code></strong> — it includes padding and border in the element's total width, making layout maths far more predictable.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLEXBOX -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">Flexbox Layout</h2>
+                <div class="section-content">
+                    <p>Flexbox solves one-dimensional alignment — distributing space along a row or column with minimal code.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <div class="code-snip">/* Row — space between */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Column — centred */
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}</div>
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <p style="font-size:0.8rem;font-weight:600;color:var(--c-muted);margin-bottom:4px;">Row — space-between:</p>
+                                <div class="demo-flex-row" style="margin-bottom:12px;">
+                                    <div class="demo-item">Alpha</div>
+                                    <div class="demo-item">Beta</div>
+                                    <div class="demo-item">Gamma</div>
+                                </div>
+                                <p style="font-size:0.8rem;font-weight:600;color:var(--c-muted);margin-bottom:4px;">Column — centred:</p>
+                                <div class="demo-flex-col">
+                                    <div class="demo-item" style="width:80%;">Top</div>
+                                    <div class="demo-item" style="width:80%;">Middle</div>
+                                    <div class="demo-item" style="width:80%;">Bottom</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Flexbox vs Grid:</strong> Use Flexbox when you have <em>one</em> axis to manage (a nav bar, a button row). Use Grid when you need rows <em>and</em> columns simultaneously.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CSS GRID -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">CSS Grid</h2>
+                <div class="section-content">
+                    <p>Grid is the most powerful layout tool in CSS — it places items across rows <em>and</em> columns simultaneously.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <div class="code-snip">/* 3-column auto grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Span the last item across all cols */
+.featured {
+  grid-column: span 3;
+}</div>
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+                                    <div class="grid-cell">A</div>
+                                    <div class="grid-cell">B</div>
+                                    <div class="grid-cell">C</div>
+                                    <div class="grid-cell" style="grid-column:span 2;">D — spans 2</div>
+                                    <div class="grid-cell">E</div>
+                                    <div class="grid-cell" style="grid-column:span 3;background:var(--c-navy);color:var(--c-lemon);">Featured — full width (span 3)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>The <code>fr</code> unit</strong> stands for "fraction of available space" — <code>repeat(3, 1fr)</code> creates three equal columns that flex with the container width.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ANIMATIONS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">Animations &amp; Transitions</h2>
+                <div class="section-content">
+                    <p>CSS handles smooth motion natively — no JavaScript required for hover effects, loaders, or entrance animations.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <div class="code-snip">/* Hover transition */
+.btn {
+  transition: transform 0.2s, background 0.2s;
+}
+.btn:hover {
+  transform: scale(1.06) translateY(-2px);
+  background: #8CC0EB;
+}
+
+/* Keyframe animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.loader {
+  animation: spin 1s linear infinite;
+}</div>
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output" style="display:flex;gap:2rem;align-items:center;flex-wrap:wrap;">
+                                <div>
+                                    <button class="animate-btn">Hover me ↗</button>
+                                </div>
+                                <div style="text-align:center;">
+                                    <div class="pulse"></div>
+                                    <p style="font-size:0.78rem;color:var(--c-muted);margin-top:4px;">Pulse loop</p>
+                                </div>
+                                <div style="text-align:center;">
+                                    <div style="width:44px;height:44px;border:4px solid var(--c-skylight);border-top-color:var(--c-navy);border-radius:50%;animation:spin 0.9s linear infinite;"></div>
+                                    <p style="font-size:0.78rem;color:var(--c-muted);margin-top:4px;">Spinner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <style>@keyframes spin { to { transform: rotate(360deg); } }</style>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESPONSIVE -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">Responsive Web Design</h2>
+                <div class="section-content">
+                    <p>Mobile‑first means writing base styles for small screens, then adding breakpoints to enhance for larger ones.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <div class="code-snip">/* Base: single column */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* ≥ 600px: two columns */
+@media (min-width: 600px) {
+  .cards { grid-template-columns: 1fr 1fr; }
+}
+
+/* ≥ 1024px: four columns */
+@media (min-width: 1024px) {
+  .cards { grid-template-columns: repeat(4, 1fr); }
+}</div>
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <div class="responsive-card-demo">
+                                    <h4 style="margin:0 0 8px;font-size:0.9rem;">Resize window to see column change:</h4>
+                                    <div class="responsive-card-flex">
+                                        <div class="responsive-card"><strong>Mobile</strong><br>Single column by default.</div>
+                                        <div class="responsive-card"><strong>Tablet+</strong><br>Two columns at ≥600px.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Mobile-first wins:</strong> It forces you to prioritise the most important content, and adding complexity upward is easier than removing it downward.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CSS VARIABLES -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">CSS Custom Properties (Variables)</h2>
+                <div class="section-content">
+                    <p>Define a value once in <code>:root</code> and reference it everywhere. Change one line to retheme the entire site.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <div class="code-snip">:root {
+  --brand-primary: #1a3a5c;
+  --brand-accent:  #8CC0EB;
+  --spacing-md:    1.5rem;
+}
+
+.card {
+  background: var(--brand-accent);
+  padding: var(--spacing-md);
+  color: var(--brand-primary);
+}
+
+/* Dark mode override */
+@media (prefers-color-scheme: dark) {
+  :root { --brand-primary: #e8f4fc; }
+}</div>
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <div style="--brand-primary:#1a3a5c;--brand-accent:#8CC0EB;background:var(--brand-accent);padding:1rem 1.2rem;border-radius:14px;color:var(--brand-primary);font-weight:600;margin-bottom:8px;">
+                                    This card reads <code>var(--brand-accent)</code> for its background.
+                                </div>
+                                <div style="--brand-primary:#fff;--brand-accent:#1a3a5c;background:var(--brand-accent);padding:1rem 1.2rem;border-radius:14px;color:var(--brand-primary);font-weight:600;">
+                                    Same markup — different variable values = instant dark theme.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Real-world use:</strong> This very portfolio uses CSS custom properties (<code>--c-navy</code>, <code>--c-sky</code>, etc.) so every colour is defined once and applied consistently across all pages.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ECOSYSTEM -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">CSS Ecosystem &amp; Career Value</h2>
+                <div class="section-content">
+                    <ul>
+                        <li><strong>Popular frameworks:</strong> Tailwind CSS (utility-first), Bootstrap, Material UI, Sass (pre-processor), PostCSS.</li>
+                        <li><strong>Why master vanilla CSS first:</strong> Frameworks compile to CSS — understanding the core makes you effective with any framework.</li>
+                        <li><strong>Interview weight:</strong> Layout questions (Flexbox, Grid, responsive) appear in ~40% of front-end interviews.</li>
+                        <li><strong>Cutting-edge features:</strong> Container queries, <code>:has()</code> relational selector, cascade layers (<code>@layer</code>), subgrid.</li>
+                    </ul>
+                    <p style="margin-top:0.7rem;">CSS keeps evolving every year — the skill compounds. Stay curious!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 My ePortfolio &mdash; CET-138 &middot; CSS</p>
+</div>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+    reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

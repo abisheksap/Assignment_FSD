@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ePortfolio | Web Development</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="main-nav">
+    <div class="nav-container">
+        <div class="nav-logo"><a href="index.html">My ePortfolio</a></div>
+        <ul class="nav-ul">
+            <li><a href="fsd.html">Full Stack</a></li>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="JS.html">JavaScript</a></li>
+            <li><a href="bootstrap.html">Bootstrap</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="intro_container">
+    <div class="intro-content">
+        <div class="intro-text">
+            <div class="intro_heading_container">
+                <span class="p_head">CET-138 Full Stack Development</span>
+            </div>
+            <p class="intro-description">
+                This ePortfolio documents my journey through the building blocks of the modern web —
+                from crafting <strong>structured, semantic HTML5</strong> and mastering
+                <strong>CSS3 layouts with Flexbox &amp; Grid</strong>, to scripting
+                <strong>interactive ES6+ JavaScript</strong> and accelerating design with
+                <strong>Bootstrap 5</strong>. Every section features live side‑by‑side code
+                demonstrations so you can see concepts in action, not just on paper.
+            </p>
+            <div class="center-button">
+                <div class="work-button"><a href="#topics">Explore My Topics</a></div>
+            </div>
+        </div>
+        <div class="intro-image">
+            <img src="img/intro_img.png" loading="lazy" alt="Portfolio intro image">
+        </div>
+    </div>
+</div>
+
+<div id="topics"></div>
+<h2 class="works">My Topics</h2>
+
+<div class="card-container">
+    <div class="i_card reveal">
+        <img src="img/fds.png" alt="FSD">
+        <h3>Full Stack Development</h3>
+        <p>From browser to server — understand the entire development pipeline.</p>
+        <a href="fsd.html" class="read-btn">Read More</a>
+    </div>
+    <div class="i_card reveal">
+        <img src="img/html.png" alt="HTML">
+        <h3>HTML</h3>
+        <p>Write meaningful, accessible markup that browsers and search engines love.</p>
+        <a href="html.html" class="read-btn">Read More</a>
+    </div>
+    <div class="i_card reveal">
+        <img src="img/css.png" alt="CSS">
+        <h3>CSS</h3>
+        <p>Craft responsive, animated interfaces with modern layout tools.</p>
+        <a href="css.html" class="read-btn">Read More</a>
+    </div>
+    <div class="i_card reveal">
+        <img src="img/js.png" alt="JavaScript">
+        <h3>JavaScript</h3>
+        <p>Bring pages to life with dynamic logic, events, and async data.</p>
+        <a href="JS.html" class="read-btn">Read More</a>
+    </div>
+    <div class="i_card reveal">
+        <img src="img/bootstrap.png" alt="Bootstrap">
+        <h3>Bootstrap</h3>
+        <p>Ship polished, mobile‑first UIs fast with the world's top CSS framework.</p>
+        <a href="bootstrap.html" class="read-btn">Read More</a>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 My ePortfolio &mdash; CET-138 Full Stack Development</p>
+</div>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

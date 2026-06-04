@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML | ePortfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="main-nav">
+    <div class="nav-container">
+        <div class="nav-logo"><a href="index.html">My ePortfolio</a></div>
+        <ul class="nav-ul">
+            <li><a href="fsd.html">Full Stack</a></li>
+            <li><a href="html.html" class="active">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="JS.html">JavaScript</a></li>
+            <li><a href="bootstrap.html">Bootstrap</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="mainbody">
+
+    <!-- HTML OVERVIEW -->
+    <div class="paragraph reveal" id="html-overview">
+        <div class="boarder">
+            <div class="section">
+                <h1 class="p_section-heading align_center">HyperText Markup Language (HTML)</h1>
+                <div class="section-image">
+                    <img src="img/html.png" class="img_fsd" alt="HTML Illustration">
+                </div>
+                <p class="p_section-content align_center">
+                    HTML is the skeleton of every website — it gives meaning to content before a single style is applied.
+                    Think of it as the architect's blueprint: headings establish hierarchy, links connect ideas, forms
+                    collect data, and semantic elements tell both browsers and screen readers exactly what each piece of
+                    content <em>is</em>. Without solid HTML, CSS and JavaScript have nothing meaningful to work with.
+                    This module walks through real, rendered examples so you see the language in action, not just in theory.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. DOCUMENT STRUCTURE -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">1. Basic HTML Document Structure</h2>
+                <div class="section-content">
+                    <p>Every HTML file follows a standard skeleton that tells the browser how to interpret the content.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/basic.png" alt="HTML document structure code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <h1>Hello, World!</h1>
+                                <p>This paragraph sits inside the <code>&lt;body&gt;</code> tag.</p>
+                                <p><em>The &lt;head&gt; holds the title and links — invisible to the reader.</em></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Key tags:</strong> <code>&lt;!DOCTYPE html&gt;</code> triggers standards mode;
+                        <code>&lt;head&gt;</code> holds metadata; <code>&lt;body&gt;</code> holds everything visible.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. HEADINGS & FORMATTING -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">2. Headings &amp; Text Formatting</h2>
+                <div class="section-content">
+                    <p>Six heading levels create a document outline. Inline elements add emphasis without breaking flow.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/basic.png" alt="Headings code example" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <h2 style="margin:0 0 4px">Section Heading</h2>
+                                <h3 style="margin:0 0 6px">Subsection</h3>
+                                <p>Normal text with <strong>strong importance</strong> and <em>italicised emphasis</em>.</p>
+                                <p><mark>Highlighted</mark> · <del>deleted</del> · <ins>inserted</ins> · <code>inline code</code></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Semantic tip:</strong> Never skip heading levels (h1 → h2 → h3) —
+                        screen readers use them to navigate. Use <code>&lt;strong&gt;</code> for
+                        importance, <code>&lt;em&gt;</code> for stress emphasis.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. LISTS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">3. Lists: Organising Information</h2>
+                <div class="section-content">
+                    <p>Three list types cover almost every content-grouping need in HTML.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/list.png" alt="HTML lists code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <ul><li>Red</li><li>Green</li><li>Blue</li></ul>
+                                <ol><li>Boil water</li><li>Add pasta</li><li>Drain &amp; serve</li></ol>
+                                <dl>
+                                    <dt><strong>CSS</strong></dt><dd>Cascading Style Sheets — controls presentation.</dd>
+                                    <dt><strong>DOM</strong></dt><dd>Document Object Model — the browser's page tree.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Choose wisely:</strong> <code>&lt;ul&gt;</code> for bullet items,
+                        <code>&lt;ol&gt;</code> for sequential steps, <code>&lt;dl&gt;</code> for
+                        glossary-style term/definition pairs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. HYPERLINKS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">4. Hyperlinks: Connecting the Web</h2>
+                <div class="section-content">
+                    <p>The <code>&lt;a&gt;</code> element is what makes the web a <em>web</em> — linking pages, files, emails, and anchors.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/a_herf.png" alt="Hyperlinks code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <p><a href="https://example.com" target="_blank" rel="noopener">External site ↗</a></p>
+                                <p><a href="index.html">Back to Home (relative)</a></p>
+                                <p><a href="#html-overview">Jump to page top (anchor)</a></p>
+                                <p><a href="mailto:hello@example.com">Email me</a></p>
+                                <p><a href="resume.pdf" target="_blank">Download résumé (PDF)</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Best practice:</strong> Always use descriptive link text — not "click here".
+                        Add <code>rel="noopener noreferrer"</code> with <code>target="_blank"</code> for security.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. IMAGES & MULTIMEDIA -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">5. Embedding Images and Media</h2>
+                <div class="section-content">
+                    <p>HTML5 natively supports images, responsive pictures, video, and audio with simple declarative tags.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/img.png" alt="Image embedding code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <img src="img/photo.jpg" alt="Sample photo" width="220" style="border-radius:10px;display:block;margin-bottom:8px;">
+                                <video controls width="220" style="border-radius:10px;display:block;margin-bottom:8px;">
+                                    <source src="stock/video.mp4" type="video/mp4">
+                                    Your browser does not support video.
+                                </video>
+                                <audio controls style="width:100%;">
+                                    <source src="stock/audio.mp3" type="audio/mpeg">
+                                    Your browser does not support audio.
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Accessibility &amp; performance:</strong> Always write <code>alt</code> text for images.
+                        Use <code>loading="lazy"</code> on below-the-fold images to improve page load speed.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. TABLES -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">6. HTML Tables: Displaying Tabular Data</h2>
+                <div class="section-content">
+                    <p>Tables are for data grids — not page layout. Use <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code> for accessible structure.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/table.png" alt="Table code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+                                    <thead style="background:var(--c-navy);color:var(--c-lemon);">
+                                        <tr><th style="padding:8px;">Language</th><th style="padding:8px;">Role</th><th style="padding:8px;">Level</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="background:#f5f9ff;"><td style="padding:8px;">HTML</td><td style="padding:8px;">Structure</td><td style="padding:8px;">⭐⭐⭐⭐⭐</td></tr>
+                                        <tr><td style="padding:8px;">CSS</td><td style="padding:8px;">Style</td><td style="padding:8px;">⭐⭐⭐⭐</td></tr>
+                                        <tr style="background:#f5f9ff;"><td style="padding:8px;">JavaScript</td><td style="padding:8px;">Behaviour</td><td style="padding:8px;">⭐⭐⭐</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Never use tables for layout.</strong> Use CSS Grid or Flexbox instead.
+                        Tables are purely for data that has a meaningful row/column relationship.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. FORMS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">7. Forms: Collecting User Input</h2>
+                <div class="section-content">
+                    <p>Forms are the primary way users interact with web applications — from search bars to checkout flows.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/form.png" alt="Form code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <form style="display:grid;gap:10px;" onsubmit="event.preventDefault(); alert('Form submitted!')">
+                                    <label style="font-weight:600;">Full Name
+                                        <input type="text" placeholder="Jane Smith" required style="display:block;width:100%;padding:6px 10px;margin-top:4px;border:1px solid #ccc;border-radius:8px;">
+                                    </label>
+                                    <label style="font-weight:600;">Email
+                                        <input type="email" placeholder="jane@example.com" style="display:block;width:100%;padding:6px 10px;margin-top:4px;border:1px solid #ccc;border-radius:8px;">
+                                    </label>
+                                    <label style="font-weight:600;">Course
+                                        <select style="display:block;width:100%;padding:6px 10px;margin-top:4px;border:1px solid #ccc;border-radius:8px;">
+                                            <option>CET-138 Full Stack</option>
+                                            <option>CET-140 Database</option>
+                                        </select>
+                                    </label>
+                                    <button type="submit" style="padding:8px 20px;background:var(--c-navy);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:600;">Submit ↗</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Form essentials:</strong> Pair every <code>&lt;input&gt;</code> with a
+                        <code>&lt;label for="..."&gt;</code>. Use the right <code>type</code> attribute
+                        (email, number, date) — it triggers correct mobile keyboards and native validation.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. SEMANTIC HTML5 -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">8. Semantic HTML5: Meaningful Structure</h2>
+                <div class="section-content">
+                    <p>Semantic elements describe <em>purpose</em>, not appearance. They improve accessibility, SEO, and code readability.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/senmatic.png" alt="Semantic HTML code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output" style="font-size:0.9rem;">
+                                <header style="background:var(--c-navy);color:white;padding:6px 10px;border-radius:8px;margin-bottom:6px;">🏠 <strong>Site Header</strong> — branding &amp; logo</header>
+                                <nav style="background:var(--c-skylight);padding:6px 10px;border-radius:8px;margin-bottom:6px;">🔗 Nav — Home · About · Portfolio · Contact</nav>
+                                <main style="border:1px dashed var(--c-sky);padding:8px;border-radius:8px;margin-bottom:6px;">
+                                    <article style="background:var(--c-lemon);padding:6px;border-radius:6px;">
+                                        <h3 style="margin:0 0 4px;">📝 Article: Blog Post</h3>
+                                        <p style="margin:0;">Main content lives here inside &lt;article&gt;.</p>
+                                    </article>
+                                </main>
+                                <footer style="background:var(--c-peach);padding:6px 10px;border-radius:8px;">🔻 Footer — &copy; 2026 My ePortfolio</footer>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Why it matters:</strong> Screen readers navigate by landmarks
+                        (<code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code>).
+                        Search engines weight content inside <code>&lt;main&gt;</code> and <code>&lt;article&gt;</code> more heavily.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. BEST PRACTICES -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">9. HTML Best Practices &amp; Ecosystem</h2>
+                <div class="section-content">
+                    <ul>
+                        <li><strong>Accessibility (A11y):</strong> Semantic HTML, ARIA labels, descriptive alt text, keyboard-navigable forms.</li>
+                        <li><strong>SEO:</strong> One <code>&lt;h1&gt;</code> per page, meaningful meta descriptions, canonical tags, structured data.</li>
+                        <li><strong>Performance:</strong> Minify HTML output, lazy-load images, defer non-critical scripts.</li>
+                        <li><strong>Validation:</strong> Run through <a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Validator</a> to catch stray tags and missing attributes.</li>
+                        <li><strong>Template Engines:</strong> JSX (React), Pug, Handlebars, EJS — all compile to HTML in the end.</li>
+                    </ul>
+                    <div class="double-description" style="margin-top:0.5rem;">
+                        <strong>Golden rule:</strong> Write valid, indented, semantic HTML first.
+                        Every other layer — CSS, JavaScript, frameworks — builds on top of this foundation.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 My ePortfolio &mdash; CET-138 &middot; HTML</p>
+</div>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+    reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

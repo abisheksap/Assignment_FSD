@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap | ePortfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="main-nav">
+    <div class="nav-container">
+        <div class="nav-logo"><a href="index.html">My ePortfolio</a></div>
+        <ul class="nav-ul">
+            <li><a href="fsd.html">Full Stack</a></li>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="JS.html">JavaScript</a></li>
+            <li><a href="bootstrap.html" class="active">Bootstrap</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="mainbody">
+
+    <!-- OVERVIEW -->
+    <div class="paragraph reveal" id="bootstrap-overview">
+        <div class="boarder">
+            <div class="section">
+                <h1 class="p_section-heading align_center">Bootstrap 5 Framework</h1>
+                <div class="section-image">
+                    <img src="img/bootstrap.png" class="img_fsd" alt="Bootstrap Illustration">
+                </div>
+                <p class="p_section-content align_center">
+                    Bootstrap is the world's most widely used front-end framework — and for good reason.
+                    Instead of writing hundreds of lines of custom CSS for grids, navbars, forms, and modals,
+                    Bootstrap gives you a battle-tested system of utility classes and pre-built components
+                    ready to drop into any project. Version 5 dropped jQuery entirely, improved the grid
+                    with CSS custom properties, and extended the utility API. Whether you're prototyping
+                    in an afternoon or launching a production site, Bootstrap accelerates every step.
+                    Each section below shows the code alongside a live rendered demo.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. GRID -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">1. Responsive Grid System</h2>
+                <div class="section-content">
+                    <p>Bootstrap's 12-column grid auto-adjusts across five breakpoints: <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code>.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/bootstrap-grid.png" alt="Bootstrap grid code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <div class="container-fluid p-0">
+                                    <div class="row g-2">
+                                        <div class="col-md-4"><div class="bg-primary text-white p-3 text-center rounded">col-md-4</div></div>
+                                        <div class="col-md-4"><div class="bg-success text-white p-3 text-center rounded">col-md-4</div></div>
+                                        <div class="col-md-4"><div class="bg-warning p-3 text-center rounded">col-md-4</div></div>
+                                    </div>
+                                    <div class="row g-2 mt-1">
+                                        <div class="col-8"><div class="bg-info p-3 text-center rounded">col-8</div></div>
+                                        <div class="col-4"><div class="bg-secondary text-white p-3 text-center rounded">col-4</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>The pattern:</strong> <code>.container</code> → <code>.row</code> → <code>.col-*</code>. Columns always add up to 12. At breakpoints smaller than specified, they stack to full width.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. TYPOGRAPHY & UTILITIES -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">2. Typography &amp; Utility Classes</h2>
+                <div class="section-content">
+                    <p>Bootstrap standardises type and provides hundreds of helper classes for spacing, colour, shadows, and borders.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/bootstrap-utilities.png" alt="Bootstrap utilities code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <h1 class="display-6">Display-6 Heading</h1>
+                                <p class="lead text-muted">Lead paragraph — larger, lighter weight, ideal for subtitles.</p>
+                                <p class="text-primary fw-bold">Primary + bold utility</p>
+                                <p class="text-success bg-light p-2 rounded">Success text on light background</p>
+                                <div class="shadow-sm p-2 mb-2 bg-white rounded d-inline-block">Box with .shadow-sm</div>
+                                <span class="badge bg-danger ms-2">New</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Utility-first thinking:</strong> Instead of naming every class, compose from single-purpose utilities. <code>.text-center.mt-3.p-2.shadow</code> replaces four custom CSS declarations.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. BUTTONS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">3. Buttons &amp; Button Groups</h2>
+                <div class="section-content">
+                    <p>Bootstrap ships contextual, outline, and size variants for every button scenario.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/bootstrap-buttons.png" alt="Bootstrap buttons code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;">
+                                    <button class="btn btn-primary">Primary</button>
+                                    <button class="btn btn-success">Success</button>
+                                    <button class="btn btn-danger">Danger</button>
+                                    <button class="btn btn-outline-secondary">Outline</button>
+                                    <button class="btn btn-warning btn-sm">Small</button>
+                                    <button class="btn btn-dark btn-lg">Large</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button class="btn btn-outline-primary">← Prev</button>
+                                    <button class="btn btn-outline-primary">1</button>
+                                    <button class="btn btn-outline-primary">2</button>
+                                    <button class="btn btn-outline-primary">Next →</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Semantic colouring:</strong> Use contextual variants (<code>btn-success</code>, <code>btn-danger</code>) to communicate intent — not just style — which also aids accessibility tools.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. NAVBAR -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">4. Responsive Navbar</h2>
+                <div class="section-content">
+                    <p>Bootstrap's navbar component collapses into a hamburger menu on smaller screens with zero custom JavaScript.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/bootstrap-navbar.png" alt="Bootstrap navbar code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" style="background:#f8f9fa;">
+                                    <div class="container-fluid">
+                                        <a class="navbar-brand fw-bold" href="#">📘 MyApp</a>
+                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#demoNavbar">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="demoNavbar">
+                                            <ul class="navbar-nav me-auto">
+                                                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                                            </ul>
+                                            <button class="btn btn-primary btn-sm">Sign In</button>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <p class="mt-2 small text-muted">↑ Resize the window to trigger the hamburger toggle.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Key attributes:</strong> <code>data-bs-toggle="collapse"</code> and <code>data-bs-target</code> wire the toggler to the collapsible menu — no JS required on your end.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. CARDS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">5. Cards – Flexible Content Containers</h2>
+                <div class="section-content">
+                    <p>Cards are Bootstrap's go-to block for displaying grouped content — image, title, text, and actions.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/bootstrap_stock.png" alt="Bootstrap cards code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <div class="card h-100">
+                                            <img src="img/bootstrap_stock_img.png" class="card-img-top" alt="Card image">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Project Alpha</h5>
+                                                <p class="card-text small">A responsive web app built with Bootstrap 5 and vanilla JS.</p>
+                                                <a href="#" class="btn btn-primary btn-sm">View →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card h-100 border-success">
+                                            <div class="card-header bg-success text-white">Featured</div>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Project Beta</h5>
+                                                <p class="card-text small">E-commerce dashboard with charts and data tables.</p>
+                                                <a href="#" class="btn btn-outline-success btn-sm">Preview</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Card flexibility:</strong> Mix <code>.card-img-top</code>, <code>.card-header</code>, <code>.card-footer</code>, and <code>.card-body</code> in any combination. Use <code>.h-100</code> inside a grid for equal-height columns.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. FORMS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">6. Forms &amp; Input Groups</h2>
+                <div class="section-content">
+                    <p>Bootstrap handles form layout, validation states, and input groups — all accessible and mobile-friendly out of the box.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/bootstrap-forms.png" alt="Bootstrap forms code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <form onsubmit="event.preventDefault();">
+                                    <div class="mb-3">
+                                        <label class="form-label">Email address</label>
+                                        <input type="email" class="form-control" placeholder="you@example.com">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">@</span>
+                                        <input type="text" class="form-control" placeholder="Username">
+                                    </div>
+                                    <select class="form-select mb-3">
+                                        <option>Select your course</option>
+                                        <option>CET-138 Full Stack</option>
+                                        <option>CET-140 Database</option>
+                                    </select>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="terms">
+                                        <label class="form-check-label" for="terms">I agree to the terms</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit Enrolment</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Add validation states:</strong> Append <code>.is-valid</code> or <code>.is-invalid</code> to inputs and add <code>.valid-feedback</code> / <code>.invalid-feedback</code> divs — Bootstrap handles the green/red styling automatically.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. MODAL -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">7. Modal – Popup Dialogs</h2>
+                <div class="section-content">
+                    <p>Bootstrap modals are accessible, scroll-locking overlays that require only data attributes — no custom JS.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/bootstrap-modal.png" alt="Bootstrap modal code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#demoModal">
+                                    🔓 Open Modal Demo
+                                </button>
+                                <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Confirm Action</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Are you sure you want to submit? This is a fully working Bootstrap 5 modal — no custom JS needed.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-primary">Confirm</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>How it works:</strong> The trigger button sets <code>data-bs-toggle="modal"</code> and <code>data-bs-target="#id"</code>. Bootstrap's JS bundle listens for those attributes globally — no extra script needed.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. SPACING -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">8. Spacing Utilities (Margin &amp; Padding)</h2>
+                <div class="section-content">
+                    <p>Bootstrap's spacing scale (0–5) controls margin and padding on any side with concise class names.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/bootstrap-spacing.png" alt="Bootstrap spacing code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output">
+                                <div class="bg-primary text-white p-1 mb-2 rounded text-center">.p-1 (0.25rem padding)</div>
+                                <div class="bg-success text-white p-3 mb-2 rounded text-center">.p-3 (1rem padding)</div>
+                                <div class="bg-warning p-4 mb-2 rounded text-center">.p-4 (1.5rem padding)</div>
+                                <div class="bg-info p-2 mx-auto rounded text-center" style="width:160px;">.mx-auto (centered)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Pattern:</strong> <code>{property}{side}-{size}</code> — e.g. <code>mt-3</code> = margin-top 1rem, <code>px-2</code> = padding left &amp; right 0.5rem. Breakpoint variants available: <code>mt-md-4</code>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. ICONS -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">9. Bootstrap Icons</h2>
+                <div class="section-content">
+                    <p>Bootstrap Icons is a free SVG icon library with 1,900+ icons — no font file required.</p>
+                    <div class="demo-panel">
+                        <div>
+                            <p class="demo-panel-label">📄 Code</p>
+                            <img src="img/bootstrap-icons.png" alt="Bootstrap icons code" class="screenshot-img">
+                        </div>
+                        <div>
+                            <p class="demo-panel-label">▶ Live Output</p>
+                            <div class="live-output" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
+                                <div style="text-align:center;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#1a3a5c" viewBox="0 0 16 16"><path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"/><path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/></svg>
+                                    <p class="small mt-1">bi-alarm</p>
+                                </div>
+                                <div style="text-align:center;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#e74c3c" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/></svg>
+                                    <p class="small mt-1">bi-heart-fill</p>
+                                </div>
+                                <div style="text-align:center;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#2ecc71" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/></svg>
+                                    <p class="small mt-1">bi-check-circle</p>
+                                </div>
+                                <div style="text-align:center;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#8CC0EB" viewBox="0 0 16 16"><path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/><path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/></svg>
+                                    <p class="small mt-1">bi-file-text</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-description">
+                        <strong>Inline SVG advantage:</strong> No external font request, no CORS issues, and you can style fill colour with any CSS including custom properties. Works offline too.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10. BEST PRACTICES -->
+    <div class="paragraph reveal">
+        <div class="boarder">
+            <div class="section no-image-section">
+                <h2 class="section-heading">10. Bootstrap Best Practices &amp; Ecosystem</h2>
+                <div class="section-content">
+                    <ul>
+                        <li><strong>Customise via Sass:</strong> Override Bootstrap's <code>_variables.scss</code> before the import — change brand colours, font sizes, and border radii at the source.</li>
+                        <li><strong>Tree-shake unused CSS:</strong> Use PurgeCSS or Bootstrap's custom build to remove components you don't use — can cut bundle size by 60%+.</li>
+                        <li><strong>Combine with custom CSS:</strong> Bootstrap sets the baseline; layer your own classes for unique branding without fighting the framework.</li>
+                        <li><strong>Alternatives:</strong> Tailwind CSS (utility-first, more control), Bulma (pure CSS), Foundation (enterprise). Bootstrap wins on beginner-friendliness and component depth.</li>
+                        <li><strong>Extensions:</strong> Bootstrap Icons, Bootswatch themes, React-Bootstrap, and NG-Bootstrap for framework integration.</li>
+                    </ul>
+                    <div class="double-description" style="margin-top:0.5rem;">
+                        <strong>Real-world use:</strong> Bootstrap powers thousands of production sites. Knowing it deeply — especially the grid and component APIs — is a skill every front-end job posting looks for.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 My ePortfolio &mdash; CET-138 &middot; Bootstrap</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+    reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
