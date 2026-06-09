@@ -26,16 +26,15 @@
 </nav>
 
 <div class="mainbody">
-
-    <!-- HTML OVERVIEW -->
+<!-- section1 : this sections is for the descriptions of html  -->
     <div class="paragraph reveal" id="html-overview">
-        <div class="boarder">
-            <div class="section">
+        <div class="boarder"> <!-- border for div -->
+            <div class="section"> <!-- different sections inside div -->
                 <h1 class="p_section-heading align_center">HyperText Markup Language (HTML)</h1>
-                <div class="section-image">
-                    <img src="img/html.png" class="img_fsd" alt="HTML Illustration">
+                <div class="section-image">  <!-- image sections inside div -->
+                    <img src="img/html/html.png" class="img_fsd" alt="HTML Illustration">
                 </div>
-                <p class="p_section-content align_center">
+                <p class="p_section-content align_center"> <!-- discriptions sections inside div -->
                     HTML is the skeleton of every website — it gives meaning to content before a single style is applied.
                     Think of it as the architect's blueprint: headings establish hierarchy, links connect ideas, forms
                     collect data, and semantic elements tell both browsers and screen readers exactly what each piece of
@@ -46,17 +45,17 @@
         </div>
     </div>
 
-    <!-- 1. DOCUMENT STRUCTURE -->
+    <!-- section2 : Document Structure basics of html  -->
     <div class="paragraph reveal">
         <div class="boarder">
-            <div class="section no-image-section">
+            <div class="section no-image-section"><!-- different sections inside div -->
                 <h2 class="section-heading">1. Basic HTML Document Structure</h2>
                 <div class="section-content">
                     <p>Every HTML file follows a standard skeleton that tells the browser how to interpret the content.</p>
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
-                            <img src="img/basic.png" alt="HTML document structure code" class="screenshot-img">
+                            <img src="img/html/basic.png" alt="HTML document structure code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
@@ -79,14 +78,14 @@
     <!-- 2. HEADINGS & FORMATTING -->
     <div class="paragraph reveal">
         <div class="boarder">
-            <div class="section no-image-section">
+            <div class="section no-image-section"> <!-- different sections inside div -->
                 <h2 class="section-heading">2. Headings &amp; Text Formatting</h2>
                 <div class="section-content">
                     <p>Six heading levels create a document outline. Inline elements add emphasis without breaking flow.</p>
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label">Code</p>
-                            <img src="img/basic.png" alt="Headings code example" class="screenshot-img">
+                            <img src="img/html/heading.png" alt="Headings code example" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
@@ -111,14 +110,14 @@
     <!-- 3. LISTS -->
     <div class="paragraph reveal">
         <div class="boarder">
-            <div class="section no-image-section">
+            <div class="section no-image-section"><!-- different sections inside div -->
                 <h2 class="section-heading">3. Lists: Organising Information</h2>
                 <div class="section-content">
                     <p>Three list types cover almost every content-grouping need in HTML.</p>
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
-                            <img src="img/list.png" alt="HTML lists code" class="screenshot-img">
+                            <img src="img/html/list.png" alt="HTML lists code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
@@ -152,7 +151,7 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
-                            <img src="img/a_herf.png" alt="Hyperlinks code" class="screenshot-img">
+                            <img src="img/html/a_herf.png" alt="Hyperlinks code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label">Live Output</p>
@@ -184,18 +183,18 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
-                            <img src="img/img.png" alt="Image embedding code" class="screenshot-img">
+                            <img src="img/html/img.png" alt="Image embedding code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
                             <div class="live-output">
                                 <img src="img/photo.jpg" alt="Sample photo" width="220" style="border-radius:10px;display:block;margin-bottom:8px;">
                                 <video controls width="220" style="border-radius:10px;display:block;margin-bottom:8px;">
-                                    <source src="stock/video.mp4" type="video/mp4">
+                                    <source src="img/video.mp4" type="video/mp4">
                                     Your browser does not support video.
                                 </video>
                                 <audio controls style="width:100%;">
-                                    <source src="stock/audio.mp3" type="audio/mpeg">
+                                    <source src="img/audio.mp3" type="audio/mpeg">
                                     Your browser does not support audio.
                                 </audio>
                             </div>
@@ -220,7 +219,7 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
-                            <img src="img/table.png" alt="Table code" class="screenshot-img">
+                            <img src="img/html/table.png" alt="Table code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
@@ -230,9 +229,9 @@
                                         <tr><th style="padding:8px;">Language</th><th style="padding:8px;">Role</th><th style="padding:8px;">Level</th></tr>
                                     </thead>
                                     <tbody>
-                                        <tr style="background:#f5f9ff;"><td style="padding:8px;">HTML</td><td style="padding:8px;">Structure</td><td style="padding:8px;">⭐⭐⭐⭐⭐</td></tr>
-                                        <tr><td style="padding:8px;">CSS</td><td style="padding:8px;">Style</td><td style="padding:8px;"><i class="ri-star-s-line"></i> <i class="ri-star-s-line"></i>⭐⭐⭐⭐</td></tr>
-                                        <tr style="background:#f5f9ff;"><td style="padding:8px;">JavaScript</td><td style="padding:8px;">Behaviour</td><td style="padding:8px;">⭐⭐⭐</td></tr>
+                                        <tr style="background:#f5f9ff;"><td style="padding:8px;">HTML</td><td style="padding:8px;">Structure</td><td style="padding:8px;"><i class="ri-star-s-line"></i><i class="ri-star-s-line"></i><i class="ri-star-s-line"></i><i class="ri-star-s-line"></i><i class="ri-star-s-line"></i></td></tr>
+                                        <tr><td style="padding:8px;">CSS</td><td style="padding:8px;">Style</td><td style="padding:8px;"><i class="ri-star-s-line"></i> <i class="ri-star-s-line"></i><i class="ri-star-s-line"></i><i class="ri-star-s-line"></i></td></tr>
+                                        <tr style="background:#f5f9ff;"><td style="padding:8px;">JavaScript</td><td style="padding:8px;">Behaviour</td><td style="padding:8px;"><i class="ri-star-s-line"></i><i class="ri-star-s-line"></i><i class="ri-star-s-line"></i></td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -257,7 +256,7 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
-                            <img src="img/form.png" alt="Form code" class="screenshot-img">
+                            <img src="img/html/form.png" alt="Form code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
@@ -300,7 +299,7 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
-                            <img src="img/senmatic.png" alt="Semantic HTML code" class="screenshot-img">
+                            <img src="img/html/senmatic.png" alt="Semantic HTML code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
