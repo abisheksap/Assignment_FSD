@@ -29,7 +29,7 @@
             <div class="section">
                 <h1 class="p_section-heading align_center">JavaScript (JS)</h1>
                 <div class="section-image">
-                    <img src="img/js.png" class="img_fsd" alt="JavaScript Illustration">
+                    <img src="img/js/js.png" class="img_fsd" alt="JavaScript Illustration">
                 </div>
                 <p class="p_section-content align_center">
                     JavaScript is the only programming language that runs natively in every web browser —
@@ -52,7 +52,7 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label">Code</p>
-                            <img src="img/variables.png" alt="JavaScript variables code" class="screenshot-img">
+                            <img src="img/js/variables.png" alt="JavaScript variables code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
@@ -87,7 +87,7 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
-                            <img src="img/js-functions.png" alt="JavaScript functions code" class="screenshot-img">
+                            <img src="img/js/js-functions.png" alt="JavaScript functions code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
@@ -100,7 +100,7 @@
                                         const n = document.getElementById("nameInput").value.trim() || "Stranger";
                                         const hour = new Date().getHours();
                                         const time = hour < 12 ? "Good morning" : hour < 18 ? "Good afternoon" : "Good evening";
-                                        document.getElementById("greetingMsg").textContent = `${time}, ${n}! 👋`;
+                                        document.getElementById("greetingMsg").textContent = `${time}, ${n}! `;
                                     }
                                 </script>
                             </div>
@@ -123,7 +123,7 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
-                            <img src="img/js-array-loop.png" alt="JavaScript array loop code" class="screenshot-img">
+                            <img src="img/js/js-array-loop.png" alt="JavaScript array loop code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
@@ -161,7 +161,7 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
-                            <img src="img/js-objects.png" alt="JavaScript objects code" class="screenshot-img">
+                            <img src="img/js/js-objects.png" alt="JavaScript objects code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
@@ -202,7 +202,7 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
-                            <img src="img/js-dom.png" alt="DOM manipulation code" class="screenshot-img">
+                            <img src="img/js/js-dom.png" alt="DOM manipulation code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label">Live Output</p>
@@ -234,7 +234,7 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label">Code</p>
-                            <img src="img/js-events.png" alt="JavaScript events code" class="screenshot-img">
+                            <img src="img/js/js-events.png" alt="JavaScript events code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
@@ -271,15 +271,15 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label">Code</p>
-                            <img src="img/js-storage.png" alt="localStorage code" class="screenshot-img">
+                            <img src="img/js/js-storage.png" alt="localStorage code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
                             <div class="live-output">
                                 <input type="text" id="storageInput" placeholder="Type a note to save…" style="padding:6px 10px;border:1px solid #ccc;border-radius:8px;width:100%;margin-bottom:8px;">
                                 <div style="display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
-                                    <button onclick="saveToLocal()" style="padding:5px 14px;background:var(--c-navy);color:#fff;border:none;border-radius:20px;cursor:pointer;font-weight:600;">💾 Save</button>
-                                    <button onclick="loadFromLocal()" style="padding:5px 14px;background:var(--c-sky);color:var(--c-navy);border:none;border-radius:20px;cursor:pointer;font-weight:600;">📂 Load</button>
+                                    <button onclick="saveToLocal()" style="padding:5px 14px;background:var(--c-navy);color:#fff;border:none;border-radius:20px;cursor:pointer;font-weight:600;"> Save</button>
+                                    <button onclick="loadFromLocal()" style="padding:5px 14px;background:var(--c-sky);color:var(--c-navy);border:none;border-radius:20px;cursor:pointer;font-weight:600;"> Load</button>
                                     <button onclick="clearLocal()" style="padding:5px 14px;background:#eee;color:#333;border:none;border-radius:20px;cursor:pointer;font-weight:600;">🗑 Clear</button>
                                 </div>
                                 <p id="storageMessage" style="font-style:italic;color:var(--c-muted);">Nothing saved yet.</p>
@@ -297,7 +297,7 @@
                                     }
                                     function clearLocal() {
                                         localStorage.removeItem("portfolioNote");
-                                        document.getElementById("storageMessage").textContent = "🗑️ Storage cleared.";
+                                        document.getElementById("storageMessage").textContent = " Storage cleared.";
                                     }
                                 </script>
                             </div>
@@ -320,12 +320,12 @@
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
-                            <img src="img/js-async.png" alt="async JS code" class="screenshot-img">
+                            <img src="img/js/js-async.png" alt="async JS code" class="screenshot-img">
                         </div>
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
                             <div class="live-output">
-                                <button id="asyncBtn" onclick="runCountdown()" style="padding:6px 18px;background:var(--c-navy);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:600;margin-bottom:8px;">▶ Start 3-Second Countdown</button>
+                                <button id="asyncBtn" onclick="runCountdown()" style="padding:6px 18px;background:var(--c-navy);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:600;margin-bottom:8px;"> Start 3-Second Countdown</button>
                                 <p id="asyncMessage" style="font-weight:600;font-size:1.1rem;color:var(--c-navy);">Press the button to begin.</p>
                                 <script>
                                     function runCountdown() {
