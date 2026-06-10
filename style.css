@@ -174,8 +174,8 @@ body {
   background: var(--c-lemon);
   padding: 0.5rem 1.6rem;
   border-radius: 60px;
-  font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
   color: var(--c-navy);
   display: inline-block;
