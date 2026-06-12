@@ -621,7 +621,6 @@ body {
 /* ── SIDE-BY-SIDE DEMO PANEL ────────────────────────────── */
 .demo-panel {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
   margin: 1.2rem 0 0.4rem;
   align-items: start;
@@ -646,11 +645,6 @@ body {
   min-height: 80px;
 }
 
-@media (max-width: 768px) {
-  .demo-panel {
-    grid-template-columns: 1fr;
-  }
-}
 
 .live-output nav {
   position: static;
