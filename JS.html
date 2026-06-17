@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript | ePortfolio</title>
+    <title>JavaScript | Abishek Sapkota Sharma</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -43,7 +43,7 @@
             <div class="section no-image-section">
                 <h2 class="section-heading">1. Variables and Data Types</h2>
                 <div class="section-content">
-                    <p><code>let</code>, <code>const</code>, and <code>var</code> declare variables. JS is dynamically typed — one variable can hold any type.</p>
+                    <p>They are the fundamental concepts which are used to store and manage data in the program. var, let and const I declare as wherever storing data value and Data types are used to store single values as well as to store the collections of are more complex entities, they are All primitive data types and non-primitive data types.</p>
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label">Code</p>
@@ -52,13 +52,13 @@
                         <div>
                             <p class="demo-panel-label"> Live Output</p>
                             <div class="live-output" id="var-demo">
-                                <p id="varOut"></p>
+                                <p id="varOut"> </p>
                                 <script>
                                     const city = "Dublin";
                                     let temperature = 14;
                                     const isRaining = true;
                                     document.getElementById("varOut").innerHTML =
-                                        ` <strong>${city}</strong> = ${temperature}°C — Raining: ${isRaining}<br>
+                                        ` <strong>${city}</strong> = ${temperature}°C - Raining: ${isRaining}<br>
                                         <code>typeof city</code> = "${typeof city}"<br>
                                         <code>typeof temperature</code> = "${typeof temperature}"`;
                                 </script>
@@ -76,7 +76,7 @@
     <div class="paragraph reveal">
         <div class="boarder">
             <div class="section no-image-section">
-                <h2 class="section-heading">2. Functions – Reusable Blocks</h2>
+                <h2 class="section-heading">2. Functions   </h2>
                 <div class="section-content">
                     <p>Functions package logic for reuse. Arrow functions offer a concise ES6 syntax.</p>
                     <div class="demo-panel">
@@ -88,7 +88,7 @@
                             <p class="demo-panel-label"> Live Output</p>
                             <div class="live-output">
                                 <input type="text" id="nameInput" placeholder="Enter your name" style="padding:6px 10px;border:1px solid #ccc;border-radius:8px;width:100%;margin-bottom:8px;">
-                                <button onclick="greetUser()" style="padding:6px 18px;background:var(--c-navy);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:600;">Greet ↗</button>
+                                <button onclick="greetUser()" style="padding:6px 18px;background:var(--c-navy);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:600;">Greet </button>
                                 <p id="greetingMsg" style="margin-top:8px;font-weight:600;color:var(--c-navy);"></p>
                                 <script>
                                     function greetUser() {
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                     <div class="double-description">
-                        <strong>Arrow functions:</strong> <code>const greet = (name) => `Hello, ${name}!`</code> — shorter syntax, and they don't bind their own <code>this</code>.
+                        <strong>Arrow functions:</strong> <code>const greet = (name) ; `Hello, ${name}!`</code>  it is used because it make shorter syntax, and they don't bind their own <code>this</code>.
                     </div>
                 </div>
             </div>
@@ -112,9 +112,9 @@
     <div class="paragraph reveal">
         <div class="boarder">
             <div class="section no-image-section">
-                <h2 class="section-heading">3. Arrays &amp; Loops</h2>
+                <h2 class="section-heading">3. Arrays and Loops</h2>
                 <div class="section-content">
-                    <p>Arrays store ordered lists. Modern methods like <code>map()</code>, <code>filter()</code>, and <code>reduce()</code> replace manual loops.</p>
+                    <p>Array is used to store ordered lists. Also, some other modern methods like map(), filter() and reduce() replace manual loops.</p>
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
@@ -152,7 +152,7 @@
             <div class="section no-image-section">
                 <h2 class="section-heading">4. JavaScript Objects</h2>
                 <div class="section-content">
-                    <p>Objects group related data and behaviour into named key-value pairs — the core of how JS models real-world entities.</p>
+                    <p>Objects are the dynamic data structure that are used to store the related data as a key value pair, where each key uniquely identifies its values. The values of the proper can be primitive, objects or functions. Also, this is known as method When you find inside an object. </p>
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
@@ -181,7 +181,7 @@
                         </div>
                     </div>
                     <div class="double-description">
-                        <strong>Destructuring shortcut:</strong> <code>const { name, grade } = student</code> unpacks object properties into variables — great for cleaner function parameters.
+                        <strong>Destructuring shortcut:</strong> <code>const { name, grade } = student</code> unpacks object properties into variables.
                     </div>
                 </div>
             </div>
@@ -193,7 +193,7 @@
             <div class="section no-image-section">
                 <h2 class="section-heading">5. DOM Manipulation</h2>
                 <div class="section-content">
-                    <p>The Document Object Model is the browser's live tree of your HTML. JS can read and rewrite any node at any time.</p>
+                    <p>The Document Object Model is the browser's live tree for your HTML. JS can read and rewrite any node at any time and change the data and content on the website in real time.</p>
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
@@ -223,9 +223,9 @@
     <div class="paragraph reveal">
         <div class="boarder">
             <div class="section no-image-section">
-                <h2 class="section-heading">6. Events – Responding to User Actions</h2>
+                <h2 class="section-heading">6. JavaScript Events </h2>
                 <div class="section-content">
-                    <p>Events fire when the user interacts. <code>addEventListener</code> keeps logic clean and separable from HTML.</p>
+                    <p>JavaScript events are those action or occurrences that happen in the browser and can be triggered by various user interactions or by various event listeners or by the browser itself.</p>
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label">Code</p>
@@ -262,7 +262,7 @@
             <div class="section no-image-section">
                 <h2 class="section-heading">7. Web Storage (localStorage)</h2>
                 <div class="section-content">
-                    <p>localStorage saves key-value strings in the browser — data survives page refreshes and tab closes.</p>
+                    <p>JavaScript web Storage is a key feature that is used to store data in your browser using key values pairs. The data is stored in the browser’s cache and is used on the web if later needed.</p>
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label">Code</p>
@@ -311,7 +311,7 @@
             <div class="section no-image-section">
                 <h2 class="section-heading">8. Asynchronous JavaScript</h2>
                 <div class="section-content">
-                    <p>JS is single-threaded, so async patterns keep the UI responsive while waiting for data or timers.</p>
+                    <p>Asynchronous JavaScript is approach in programming language as it approaches to enable the non-blocking execution of tasks. It improves responsiveness and manages time efficiency for time consumptions operations in web applications.   </p>
                     <div class="demo-panel">
                         <div>
                             <p class="demo-panel-label"> Code</p>
